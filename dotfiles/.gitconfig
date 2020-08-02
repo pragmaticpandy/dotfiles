@@ -1,0 +1,13 @@
+[user]
+    name = Paul 💩
+
+[core]
+    excludesfile = ~/.gitignore
+
+[includeIf "gitdir:~/amazon-workspaces/"]
+    path = ~/.gitconfig-amazon
+[includeIf "gitdir:~/workspaces/"]
+    path = ~/.gitconfig-amazon
+[includeIf "gitdir:~/personal-workspaces/"]
+    path = ~/.gitconfig-personal
+

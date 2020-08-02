@@ -1,0 +1,10 @@
+/.apollorc
+/apollo-overrides
+/build
+*.swp
+*.swo
+pauand-test*
+*.zwc
+tags
+.DS_Store
+
