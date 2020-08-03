@@ -10,6 +10,7 @@ source ~/installs/antigen.zsh
 
 antigen bundle ~/personal-workspaces/dotfiles --no-local-clone
 antigen bundle https://github.com/pragmaticpandy/pragmaticprompt.git
+antigen bundle ssh://git@github.com/pragmaticpandy/privatedotfiles.git
 
 antigen apply
 
