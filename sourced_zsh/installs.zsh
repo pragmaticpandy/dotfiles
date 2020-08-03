@@ -30,7 +30,7 @@ install-gruvbox() (
 
 install-dotfiles() (
 	echo Installing dotfiles...
-	dotfiles_dir="${0:a:h}"/dotfiles
+	dotfiles_dir="$(dirname "$0:A")"/dotfiles
 
 	# For every dot file in dot-files, link from the ~/FILENAME to the dot file.
 	for p in "$dotfiles_dir"/*(D); do
