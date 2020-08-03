@@ -57,3 +57,23 @@ install-dotfiles() (
 
 	echo Done with all links.
 )
+
+# necessary to enable python 2 support
+install-vim() (
+    sudo echo Installing vim...
+    brew install python
+    mkdir -p ~/installs
+    (
+        set -e
+        cd ~/installs
+        rm -rf vim
+        git clone https://github.com/vim/vim.git
+        cd vim
+        make distclean
+        ./configure --enable-pythoninterp --enable-python3interp
+        make
+        sudo make install
+    )
+
+    echo Done.
+)
