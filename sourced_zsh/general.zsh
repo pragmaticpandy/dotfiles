@@ -16,7 +16,7 @@ alias vz="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
 
 alias e="exit"
-alias l="ls -alh"
+alias l="ls -alh --ignore='.DS_Store'"
 alias lt="ls -alrth"
 alias v="vim"
 alias vi="vim"
