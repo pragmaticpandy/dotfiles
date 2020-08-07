@@ -194,6 +194,16 @@ endfun
 " Alias AddImport so that it can be called like 'I NonNull'
 command! -nargs=1 I call AddImport(<q-args>)
 
+fun! TurnOnAutoSave()
+    augroup AutoSave
+    autocmd TextChanged,TextChangedI <buffer> silent write
+    augroup END
+endfun
+
+fun! TurnOffAutoSave()
+    :autocmd! AutoSave
+endfun
+
 " pathogen for plugins
 " More info: https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
