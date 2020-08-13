@@ -36,9 +36,9 @@ f(){
     else echo "Wrong number of arguments. Usage: f <pattern> [directory]"; return 1; fi
     typeset -A files
     echo "Friendly reminder that the existence of uppercase letters in the input will make the search case sensitive.";
-    echo "command is 'fd -H -I \"$1\" $dir'"
+    echo "command is 'fd -E build -H -I \"$1\" $dir'"
     echo
-    files="$(fd -H -I "$1" $dir)"
+    files="$(fd -E build -H -I "$1" $dir)"
     if [ -z "$files" ]; then return 0; fi
     count=0
     while read -r line; do
