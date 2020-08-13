@@ -11,8 +11,7 @@ source ~/installs/antigen.zsh
 antigen bundle ssh://git@github.com/pragmaticpandy/dotfiles.git
 antigen bundle https://github.com/pragmaticpandy/pragmaticprompt.git
 antigen bundle ssh://git@github.com/pragmaticpandy/privatedotfiles.git
-
-antigen bundle ~/personal-workspaces/serviz --no-local-clone
+antigen bundle https://github.com/pragmaticpandy/serviz.git
 
 antigen apply
 
