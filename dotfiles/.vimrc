@@ -20,7 +20,7 @@ autocmd FileType * hi Normal ctermbg=0
 autocmd FileType * hi LineNr ctermfg=237
 
 " Make lines break automatically
-autocmd FileType tex,latex,markdown set tw=100
+autocmd FileType tex,latex,markdown,ruby,java set tw=100
 
 " Spell check
 set spellfile=~/.vim/spell/personal.utf-8.add
