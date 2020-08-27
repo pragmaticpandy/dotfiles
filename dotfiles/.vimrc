@@ -22,6 +22,7 @@ autocmd FileType * hi LineNr ctermfg=237
 " Make lines break automatically
 autocmd FileType tex,latex,markdown,ruby,java set tw=100
 autocmd Filetype gitcommit set tw=72
+autocmd FileType java set fo-=t " Only auto-wrap comments in Java
 
 " Spell check
 set spellfile=~/.vim/spell/personal.utf-8.add
