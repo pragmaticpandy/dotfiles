@@ -25,7 +25,7 @@ autocmd Filetype gitcommit set tw=72
 autocmd FileType java set fo-=t " Only auto-wrap comments in Java
 
 " Spell check
-autocmd Filetype markdown,tex,gitcommit call SetupSpellCheck()
+autocmd Filetype markdown,tex,gitcommit,java call SetupSpellCheck()
 function SetupSpellCheck()
     set spell
     set spellcapcheck=false
