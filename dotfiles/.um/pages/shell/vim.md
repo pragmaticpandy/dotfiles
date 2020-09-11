@@ -3,6 +3,7 @@
 {:data-date="April 16, 2019"}
 {:data-extra="Um Pages"}
 
+
 ## Find & replace for accross multiple files
 ``:args `grep -r -l 'foo' src```
 : Populate args with the files that have the thing being replaced.
@@ -26,3 +27,7 @@ otherwise vim won't move on to the next file.
 `:argdo execute 'normal o@SetThreadLocalContext' | w`
 : Do some normal mode stuff.
 
+## Other
+
+`V9G`
+: Enter visual mode, with the lines from current to line 9 selected.
