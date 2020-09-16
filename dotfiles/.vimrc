@@ -20,12 +20,12 @@ autocmd FileType * hi Normal ctermbg=0
 autocmd FileType * hi LineNr ctermfg=237
 
 " Make lines break automatically
-autocmd FileType tex,latex,markdown,ruby,java set tw=100
+autocmd FileType tex,latex,markdown,ruby,java,kotlin set tw=100
 autocmd Filetype gitcommit set tw=72
-autocmd FileType java set fo-=t " Only auto-wrap comments in Java
+autocmd FileType java,kotlin set fo-=t " Only auto-wrap comments
 
 " Spell check
-autocmd Filetype markdown,tex,gitcommit,java call SetupSpellCheck()
+autocmd Filetype markdown,tex,gitcommit,java,kotlin call SetupSpellCheck()
 function SetupSpellCheck()
     set spell
     set spellcapcheck=false
