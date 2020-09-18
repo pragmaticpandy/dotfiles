@@ -100,15 +100,15 @@ fun! InsertPackageName()
     endif
 
     let path = expand('%:p:h')
-    let indices = [strridx(path, '/src/'), strridx(path, '/tst/')]
-    let indexOfSourceDir = max(indices)
+    let indices = [strridx(path, '/com/'), strridx(path, '/org/')]
+    let indexOfComDir = max(indices)
 
-    if indexOfSourceDir < 0
+    if indexOfComDir < 0
         call winrestview(l:winview)
         return
     endif
 
-    let subPath = strpart(path, indexOfSourceDir + 5)
+    let subPath = strpart(path, indexOfComDir + 1) " get rid of forward slash
     let packageName = substitute(subPath, '/', '.', 'g')
 
     " Delete the line and replace it with the package name.
