@@ -127,7 +127,7 @@ fun! AddImport(className)
     let l:winview = winsaveview()
 
     let path = expand('%:p:h')
-    let indices = [strridx(path, '/src/'), strridx(path, '/tst/')]
+    let indices = [strridx(path, '/com/'), strridx(path, '/org/')]
     let indexOfSourceDir = max(indices)
 
     if indexOfSourceDir < 0
