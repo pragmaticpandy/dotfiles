@@ -8,10 +8,13 @@ if [[ ! -a ~/installs/antigen.zsh ]]; then
 fi
 source ~/installs/antigen.zsh
 
-antigen bundle ssh://git@github.com/pragmaticpandy/dotfiles.git
+antigen bundle https://github.com/pragmaticpandy/dotfiles.git
 antigen bundle https://github.com/pragmaticpandy/pragmaticprompt.git
-antigen bundle ssh://git@github.com/pragmaticpandy/privatedotfiles.git
 antigen bundle https://github.com/pragmaticpandy/serviz.git
+
+if [[ -a ~/.ssh/id_rsa_github ]]; then
+    antigen bundle ssh://git@github.com/pragmaticpandy/privatedotfiles.git
+fi
 
 antigen apply
 
@@ -25,3 +28,5 @@ fi
 
 export GOPATH="$HOME/go"
 PATH="$GOPATH/bin:$PATH"
+
+
