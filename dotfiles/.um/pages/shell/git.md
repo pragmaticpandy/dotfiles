@@ -21,7 +21,7 @@ git bisect old c6bc1301 # very old commit that has RawObject
 
 # just using a find shell command to test, though swapping 1 and 0 result of word count
 
-# good/old commits should print 0
+# good/old commits should exit 0
 
 git bisect run zsh -c 'exit $(( ( $(fd -E build -H -I "rawobject.java" . | wc -l) + 1 ) % 2 ))'
 
