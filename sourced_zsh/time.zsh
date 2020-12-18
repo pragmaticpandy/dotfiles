@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
 alias get-current-seconds="date +%s"
-alias from-seconds='date -R -r'
+
+from-seconds() {
+    date -d @"$1"
+}
 
 # uses same format as from-seconds
 to-seconds() {
