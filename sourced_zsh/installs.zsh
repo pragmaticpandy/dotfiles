@@ -7,7 +7,7 @@ install-panserver() (
 	brew install python
 	rm -rf ~/installs/panserver
 	git clone https://github.com/pragmaticpandy/panserver.git ~/installs/panserver
-	pip3 install bottle
+	sudo pip3 install bottle
 	brew install pandoc
 	echo Done.
 )
