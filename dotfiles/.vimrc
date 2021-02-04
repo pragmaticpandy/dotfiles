@@ -83,6 +83,7 @@ endfun
 
 " Run SortImports before saving.
 :autocmd BufWritePre *.java call SortImports()
+:autocmd BufWritePre *.kt call SortImports()
 
 " write 'package' at the beginning of a line and this will auto-fill it
 fun! InsertPackageName()
@@ -120,6 +121,7 @@ endfun
 
 " Run InsertPackageName before saving .java files.
 :autocmd BufWritePre *.java call InsertPackageName()
+:autocmd BufWritePre *.kt call InsertPackageName()
 
 " Searches current code project that you're working in for imports matching the class name provided.
 fun! AddImport(className)
@@ -138,7 +140,7 @@ fun! AddImport(className)
 
     let packageDir = strpart(path, 0, indexOfSourceDir)
 
-    let matchesString = system('grep -hr --include "*.java" "^import.*\.' . a:className . ';$" ' . packageDir . ' | sort -u')
+    let matchesString = system('grep -hr --include "*.java" --include "*.kt" "^import.*\.' . a:className . ';\?$" ' . packageDir . ' | sort -u')
     let matchesList = split(matchesString, "\n")
 
     if len(matchesList) == 0
